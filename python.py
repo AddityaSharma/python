@@ -8,8 +8,8 @@
     # Any empty mapping. For example, {}.
 
 # to get the memory location of an element , we use the id method
-# a = 7
-# print(id(a)) -> print outs address of object a.
+a = 7
+print(id(a)) -> print outs address of object a.
 
 # is Vs ==
 a = [1,2,3]
@@ -50,6 +50,52 @@ while x < 10:
     
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------- #
 
+# lecture-8: Functions
+
+# Functions say to stay DRY -> i.e don't repeat yourself.
+
+# declaring an function and leaving it empty for now -> use pass statement to avoid compliation errors
+def hello(): 
+    pass
+
+# declaring and defining a function
+def hello(): 
+    print('hello World')
+
+hello() # executing function -> hello world
+
+# declaring and defining a function with return statement
+def hello(): 
+    return 'hello World'
+
+print(hello()) # executing function
+
+# declaring and defining a function having arguments
+def hello(greeting): 
+    return '{} World'.format(greeting) # f'{greeting} world' -> same string using f format.
+
+print(hello('Hi')) # executing function
+
+
+# a bit-advanced topic:
+# *args amd **kwargs allow us to accept an arbitrary number of positional and keyword arguments respectively
+def student_info(*args, **kwargs):
+    print(args) # {'Math', 'Art'} -> its basically a tuple with all our positional arguments
+    print(kwargs) # {'name': 'John', 'age': 22} -> its basically a dictionary with all our keyword arguments
+
+student_info('Math', "Art", name='John', age=22)
+
+# another way of sending arguments
+def student_info(*args, **kwargs):
+    print(args) # {'Math', 'Art'} -> its basically a tuple with all our positional arguments
+    print(kwargs) # {'name': 'John', 'age': 22} -> its basically a dictionary with all our keyword arguments
+
+courses = ['Math', 'Art']
+info = {'name': 'John', 'age': 22}
+
+student_info(*courses, **info) # we have sent a list as args and a dictionary as kwargs using the stated syntax.
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------- #
 
 
 
