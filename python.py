@@ -97,15 +97,47 @@ student_info(*courses, **info) # we have sent a list as args and a dictionary as
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------- #
 
+# lecture-9: Import Modules and Exploring the standard library
+
+# when we import a complete module, we have all the code from the imported file including any print statements or variable.
+# while performing imports of function or variable, we have acess to only those methods or variables that we have imported.
+
+# my_module.py file: -> this file is in the same directory as python.py and will be imported by python.py.
+print('Imported my_module...')
+test = 'Test String'
+
+def find_index(to_search, target):
+    '''Find the index of a value in a sequence'''
+    for i, value in enumerate(to_search):
+        if value == target:
+            return i
+
+    return -1
 
 
+# Importing a complete module 'my_module' in python.py file.
+# python.py file :
+import my_module # another way of importing to make module name shorter -> import my_module as mm, 'mm' -> new shorter name to my_module.
+
+courses = ['History', 'Math', 'Physics', 'CompSci']
+index = my_module.find_index(courses, 'Math') # O/P : 1 -> calling imported function : module_name.function_name().
+# index = mm.find_index(courses, 'Math) -> 'mm' refers to my_module.
+print(index)
 
 
+# Importing a function or variable from module 'my_module' in python.py file.
+# python.py file :
+from my_module import find_index, test # from module_name import function_name/ variable_name.
+# another way of importing a function or variable by changing name -> fron my_module import find_index as f_i
+courses = ['History', 'Math', 'Physics', 'CompSci']
+index = find_index(courses, 'Math') # O/P : 1 -> calling imported function : function_name().
+# index = f_i(courses, 'Math) -> 'mm' refers to my_module.
+print(index)
 
 
+# importing files from different directory -> haven't coded it up, used system environment -> explained in lecture -> watch recording.
 
+#importing modules from standard library:
+#import module_name;
 
-
-
-
-
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------- #
