@@ -1,3 +1,55 @@
+# lecture-1: installing python on local machine and running python code in interactive shell (command prompt)
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------- #
+
+# lecture-2: strings
+
+#creating multiline strings:
+s1 = '''my name is
+Additya Sharma.'''
+print(s1)
+
+s2 = """my name is
+Additya Sharma."""
+print(s2)
+
+
+# in-build functions in strings:
+message = "Hello World!"
+print(message[2]) # O/P : l -> accesing element by index.
+print(message[0:7]) # O/P : 'Hello W' -> accesing substring from a string -> [start_point : end_point)
+print(message[:9]) # O/P : 'Hello Wor' -> accesing substring from a string -> [ : end_point) -> 0 considered as start_point by default.
+print(message[3:]) # O/P : 'lo World!' -> accesing substring from a string -> [start_point : ) -> last possible index considered as end_point by default.
+print(len(message)) # length of string message.
+print(message.upper()) # convert string message to upper_case.
+print(message.lower()) # convert string message to lower_case.
+print(message.count('l')) # O/P : 3 -> print number of occurances of 'l' in string 'Hello world!'
+print(message.find('l')) # O/P : 2 -> print index of first occurance of 'l' in string 'Hello world!'
+print(message.replace('World', 'Universe')) # O/P : 'Hello Universe!' -> replace all occurances of 'World' in string message to 'Universe'
+
+
+# concatenation of strings:
+greeting = 'hello'
+name = 'Additya'
+
+# Method - 1: using '+' operator.
+s1 = greeting + ', ' + name
+print(s1)
+
+# Method - 2: using 'format' method 
+s2 = '{}, {}'.format(greeting, name)
+print(s2)
+
+# Method - 3: using f-string
+s3 = f'{greeting}, {name}'
+print(s3)
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------- #
+
+
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------- #
+
 # lecture-6: booleans and conditionsals
 
 # False Values:
